@@ -15,8 +15,24 @@ bool CheckLength (string st)
     return rezult;
 }
 
-string[] arraySt = {"Hello", "2", "world", ":-)"};
+void PrintArray(string[] arrayToPrint)
+{
+    Console.Write("[");
+    for (int i = 0; i < arrayToPrint.Length; i++)
+    {
+        Console.Write(arrayToPrint[i]);
+        if (i != arrayToPrint.Length - 1)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
+
+string[] arraySt = {"Russia", "Denmark", "Kazan"};
 int num = 0;
+int j = 0;
 
 for (int i = 0; i < arraySt.Length ; i++)
 {
@@ -26,4 +42,14 @@ for (int i = 0; i < arraySt.Length ; i++)
     }
 }
 
-System.Console.WriteLine(num);
+string[] arraySt2 = new string [num];
+for (int i = 0; i < arraySt.Length ; i++)
+{   
+    if (CheckLength(arraySt[i]))
+    {
+        arraySt2[j] = arraySt[i];
+        j++;
+    }
+}
+
+PrintArray(arraySt2);
