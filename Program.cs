@@ -5,8 +5,6 @@
 При решении не рекомендуется пользоваться коллекциями, 
 лучше обойтись исключительно массивами. */
 
-string st = "1234";
-
 bool CheckLength (string st)
 {
     bool rezult = true;
@@ -17,5 +15,15 @@ bool CheckLength (string st)
     return rezult;
 }
 
-bool rezult = CheckLength(st);
-System.Console.WriteLine(rezult);
+string[] arraySt = {"Hello", "2", "world", ":-)"};
+int num = 0;
+
+for (int i = 0; i < arraySt.Length ; i++)
+{
+    if (CheckLength(arraySt[i]))
+    {
+        num++;
+    }
+}
+
+System.Console.WriteLine(num);
