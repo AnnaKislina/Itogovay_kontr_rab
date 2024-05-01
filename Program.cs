@@ -5,3 +5,17 @@
 При решении не рекомендуется пользоваться коллекциями, 
 лучше обойтись исключительно массивами. */
 
+string st = "1234";
+
+bool CheckLength (string st)
+{
+    bool rezult = true;
+    if (st.Length > 3)
+    {
+        rezult = false;
+    }
+    return rezult;
+}
+
+bool rezult = CheckLength(st);
+System.Console.WriteLine(rezult);
